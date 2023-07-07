@@ -1,17 +1,4 @@
 
-/*
-
-  Shape Shifter
-  =============
-  A canvas experiment by Kenneth Cachia
-  http://www.kennethcachia.com
-
-  Updated code
-  ------------
-  https://github.com/kennethcachia/Shape-Shifter
-
-*/
-
 
 var S = {
   init: function (start) {
@@ -41,7 +28,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('|#countdown 3||祝|杜杜大宝贝|生日快乐|祝你|生日快乐|祝你幸福|祝你健康|前途光明|祝你|生日快乐！|#icon heart|#icon heart-empty|#icon heart');
+        S.UI.simulate('|#countdown 3||祝！|杜杜大宝贝|生日快乐|祝你|生日快乐|祝你幸福|祝你健康|前途光明|祝你|生日快乐！|#icon heart|#icon heart-empty|#icon heart');
       }
 
       S.Drawing.loop(function () {
@@ -116,8 +103,8 @@ S.Drawing = (function () {
 
 S.UI = (function () {
   var delay1,delay2;
-  delay1 = 3000;
-  delay2 = 5000;
+  delay1 = 5000;
+  delay2 = 6000;
   var canvas = document.querySelector('.canvas'),
       interval,
       isTouch = false, //('ontouchstart' in window || navigator.msMaxTouchPoints),
@@ -174,8 +161,8 @@ S.UI = (function () {
         value,
         current;
     if (window.innerWidth>500 && window.innerHeight>500){
-      delay1 = 1000;
-      delay2 = 2000;
+      delay1 = 5000;
+      delay2 = 6000;
     }
     // overlay.classList.remove('overlay--visible');
     sequence = typeof(value) === 'object' ? value : sequence.concat(value.split('|'));
@@ -514,7 +501,7 @@ S.Dot.prototype = {
 
 
 S.ShapeBuilder = (function () {
-  var gap = 8,
+  var gap = 6,
       start =  S.Drawing.getStatus();
   // if (start !== '0'){
   //   gap = 13;
@@ -575,7 +562,7 @@ S.ShapeBuilder = (function () {
   }
 
   function setFontSize(s) {
-    shapeContext.font = 'bold ' + s + 'px ' + fontFamily;
+    shapeContext.font = 'white ' + s + 'px ' + fontFamily;
   }
 
   function isNumber(n) {
