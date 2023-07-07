@@ -1,4 +1,5 @@
 
+
 var S = {
   init: function (start) {
     if (start != 0){
@@ -27,7 +28,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('|#countdown 3|祝！|杜杜大宝贝|生日快乐|祝你|生日快乐|身体健康|前途光明|心想事成|万事顺利|生日快乐，宝宝!|#icon heart|#icon heart-empty|#icon heart');
+        S.UI.simulate('|#countdown 3||祝！|杜杜大宝贝|生日快乐|祝你|生日快乐|祝你幸福|祝你健康|前途光明|祝你|生日快乐！|#icon heart|#icon heart-empty|#icon heart');
       }
 
       S.Drawing.loop(function () {
@@ -561,7 +562,7 @@ S.ShapeBuilder = (function () {
   }
 
   function setFontSize(s) {
-    shapeContext.font = 'white' + s + 'px ' + fontFamily;
+    shapeContext.font = 'white ' + s + 'px ' + fontFamily;
   }
 
   function isNumber(n) {
