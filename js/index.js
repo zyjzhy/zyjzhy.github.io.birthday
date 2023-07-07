@@ -562,7 +562,7 @@ S.ShapeBuilder = (function () {
   }
 
   function setFontSize(s) {
-    shapeContext.font = 'bold ' + s + 'px ' + fontFamily;
+    shapeContext.font = 'white ' + s + 'px ' + fontFamily;
   }
 
   function isNumber(n) {
