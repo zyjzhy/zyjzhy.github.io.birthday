@@ -28,7 +28,7 @@ var S = {
       if (i !== -1) {
         S.UI.simulate(decodeURI(action).substring(i + 3));
       } else {
-        S.UI.simulate('|#countdown 3|祝！|杜杜大宝贝|破壳日快乐|送你一朵小花花|#icon rose||祝宝宝|永远十八|永远爱我|心想事成|万事如意|前程似锦|鹏程万里|财源滚滚！|#icon heart|#icon heart-empty|#icon heart|HAPPY BIRTHDAY!|#icon birthday');
+        S.UI.simulate('|#countdown 3|祝！|杜杜大宝贝|破壳日快乐|送你一朵小花花|#icon rose|祝宝宝|永远十八|永远爱我|心想事成|万事如意|前程似锦|鹏程万里|财源滚滚！|#icon heart|#icon heart-empty|#icon heart|HAPPY BIRTHDAY!|#icon birthday');
       }
 
       S.Drawing.loop(function () {
@@ -103,8 +103,8 @@ S.Drawing = (function () {
 
 S.UI = (function () {
   var delay1,delay2;
-  delay1 = 8000;
-  delay2 = 9000;
+  delay1 = 6000;
+  delay2 = 7000;
   var canvas = document.querySelector('.canvas'),
       interval,
       isTouch = false, //('ontouchstart' in window || navigator.msMaxTouchPoints),
